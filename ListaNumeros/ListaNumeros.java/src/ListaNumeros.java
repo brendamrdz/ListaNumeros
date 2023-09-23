@@ -1,5 +1,4 @@
 
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,14 +16,14 @@ public class ListaNumeros {
     public static void agregarValores(ArrayList<Integer> numlist){
         Scanner sc = new Scanner(System.in);
         int j = 0;
-        System.out.println("Ingresa un numero:");
+        System.out.println("Ingresa un numero, para salir ingresa el numero -99:");
         while(sc.hasNextInt()){
             
             int num = sc.nextInt();
             if(num != -99){
                 numlist.add(j, num);
                 j++;
-                System.out.println("Ingresa un numero:");
+                System.out.println("Ingresa un numero, para salir ingresa el numero -99:");
             }else{
                 break;
             }
@@ -42,14 +41,12 @@ public class ListaNumeros {
     }
     
     public static Integer suma(ArrayList<Integer> numlist){
-        int temp = 0;
+        int sum = 0;
          for(int i=0; i<numlist.size(); i++){
-            int sum = numlist.get(i);
-            temp = sum + temp;
-            
+            sum = sum + numlist.get(i);
           }   
-          System.out.println("La suma es:" + temp);
-          return temp;
+          System.out.println("La suma es:" + sum);
+          return sum;
     }
     
     public static Integer media(int sum, ArrayList<Integer> numlist){
@@ -69,4 +66,3 @@ public class ListaNumeros {
             System.out.println("Los numeros mayores a la media:" + numMed);
     }
 }
-
